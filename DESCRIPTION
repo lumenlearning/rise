@@ -9,7 +9,7 @@ LazyData: true
 ByteCompile: true
 RoxygenNote: 6.0.1
 Depends: R(>= 2.10.0)
-Imports: 
+Depends: 
     ggplot2,
     stats
 Suggests: 

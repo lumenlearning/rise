@@ -6,7 +6,6 @@
 #' @param visual When this argument is FALSE (the default), the function returns an annotated data frame with RISE information in the final two columns. When this argument is TRUE, the function returns a ggplot2 graph of the RISE diamond.
 #'
 #' @return Returns either an annotated data frame or a graph, depending on the value of visual.
-#' @import ggplot2
 #' @export
 #' @examples
 #' library(ggplot2)
@@ -52,7 +51,7 @@ rise <- function(df, visual = FALSE) {
   l4 <- data.frame(x1 = p4x, x2 = p1x, y1 = p4y, y2 = p1y)
 
   # Create the plot
-  p <- ggplot(df, aes(unlist(df[, 3]), unlist(df[, 2]))) +
+  p <- ggplot2::ggplot(df, aes(unlist(df[, 3]), unlist(df[, 2]))) +
     geom_point() +
     geom_hline(yintercept = y_mean) +
     geom_vline(xintercept = x_mean) +
