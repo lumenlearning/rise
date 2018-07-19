@@ -1,8 +1,24 @@
-# rise
+# RISE Analysis in R
 
-This R package helps you conduct RISE analyses as described in the paper Bodily, R., Nyland, R., & Wiley, D. (2017). The RISE Framework: Using Learning Analytics to Automatically Identify Open Educational Resources for Continuous Improvement. International Review of Research on Distance and Open Learning, 18(2). DOI: http://www.irrodl.org/index.php/irrodl/article/view/2952.
+This R package helps you conduct RISE analyses as described in the paper *Bodily, R., Nyland, R., & Wiley, D. (2017). The RISE Framework: Using Learning Analytics to Automatically Identify Open Educational Resources for Continuous Improvement. International Review of Research on Distance and Open Learning, 18(2).* DOI: http://www.irrodl.org/index.php/irrodl/article/view/2952.
+
+The purpose of a RISE analysis is to help an instructional designer / learning scientist / course developer / instructor quickly identify portions of a course that aren't supporting learning as effectively as they would like. When course materials are licensed as [open educational resources](http://opencontent.org/definition/), materials identified through RISE analysis can be iteratively enhanced through a process of continuous improvement. Special attention should be given to outcomes classified in quadrant four (at the bottom right), where students are spending more time than average using resources but performing below average on associated assessments. For more detail, please refer to the article.
+
+Before a RISE analysis can be performed, a course must have:
+
+  * clearly defined learning outcomes,
+  * each piece of content (text, video, interactive, etc.) aligned to an outcome,
+  * each individual assessment item aligned to an outcome, and
+  * data about content use and assessment performance by outcome.  
 
 ## Installation
+
+You can always install the latest version of the RISE Analysis package using:
+
+``` r
+install.packages("devtools")
+devtools::install_github('lumenlearning/rise')
+```
 
 You will soon be able to install the released version of rise from [CRAN](https://CRAN.R-project.org) with:
 
@@ -49,3 +65,6 @@ rise_df <- rise_analysis(sample_df)
 rise_graphic <- rise_analysis(sample_df, visual = TRUE)
 ```
 
+## License
+
+The rise package is licensed under an MIT license. See the LICENSE file for additional details.
