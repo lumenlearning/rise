@@ -6,6 +6,7 @@
 #' @param visual When this argument is FALSE (the default), the function returns an annotated data frame with RISE information in the final two columns. When this argument is TRUE, the function returns a ggplot2 graph of the RISE diamond.
 #'
 #' @return Returns either an annotated data frame or a graph, depending on the value of visual.
+#' @import ggplot2
 #' @export
 #' @examples
 #' library(ggplot2)

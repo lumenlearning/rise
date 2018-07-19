@@ -4,7 +4,7 @@ This R package helps you conduct RISE analyses as described in the paper Bodily,
 
 ## Installation
 
-You can install the released version of rise from [CRAN](https://CRAN.R-project.org) with:
+You will soon be able to install the released version of rise from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("rise")
@@ -18,7 +18,9 @@ The rise package expects a data frame containing three columns:
 * average score on all assessments aligned with the outcome
 * average views of each learning resource aligned with the outcome
 
-The package expects these columns in this order. Pre-process your data in order to conform to this format. Then perform the RISE analysis as follows.
+The package expects these columns in this order. Pre-process your data in order to conform to this format and you're ready to perform the RISE analysis.
+
+The following example contains a toy data set so you can explore the features of the package.
 
 ``` r
 library(rise)
