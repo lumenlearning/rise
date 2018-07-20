@@ -1,5 +1,5 @@
 Package: rise
-Version: 0.1
+Version: 1.0
 Title: Conduct RISE Analysis in R
 Description: Given a data frame containing course outcomes, average scores on assessments aligned with those outcomes, and average number of views per aligned learning resource, annotates the data frame to indicate which RISE quadrant each outcome is in and whether or not the outcome is inside or outside the RISE diamond. Also creates a scatterplot graphic of outcomes plotted over the RISE diamond.
 Authors@R: c(person("David", "Wiley", email= "david.wiley@gmail.com", role = c("aut", "cre")), person("Lumen Learning", role= "cph"))
