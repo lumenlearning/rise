@@ -1,5 +1,5 @@
 Package: rise
-Version: 1.0
+Version: 1.0.2
 Title: Conduct RISE Analysis in R
 Description: Automates the process of identifying learning materials that are not effectively supporting student learning.
 Authors@R: c(person("David", "Wiley", email= "david.wiley@gmail.com", role = c("aut", "cre")), person("Lumen Learning", role= "cph"))

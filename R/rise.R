@@ -55,10 +55,10 @@ rise <- function(df, visual = FALSE) {
     geom_point() +
     geom_hline(yintercept = y_mean) +
     geom_vline(xintercept = x_mean) +
-    geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), linetype = "dotted", colour = "dodgerblue3", data = l1) +
-    geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), linetype = "dotted", colour = "dodgerblue3", data = l2) +
-    geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), linetype = "dotted", colour = "dodgerblue3", data = l3) +
-    geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), linetype = "dotted", colour = "dodgerblue3", data = l4) +
+    geom_segment(aes_string(x = 'x1', y = 'y1', xend = 'x2', yend = 'y2'), linetype = "dotted", colour = "dodgerblue3", data = l1) +
+    geom_segment(aes_string(x = 'x1', y = 'y1', xend = 'x2', yend = 'y2'), linetype = "dotted", colour = "dodgerblue3", data = l2) +
+    geom_segment(aes_string(x = 'x1', y = 'y1', xend = 'x2', yend = 'y2'), linetype = "dotted", colour = "dodgerblue3", data = l3) +
+    geom_segment(aes_string(x = 'x1', y = 'y1', xend = 'x2', yend = 'y2'), linetype = "dotted", colour = "dodgerblue3", data = l4) +
     xlab(names(df[, 3])) +
     ylab(names(df[, 2]))
 
