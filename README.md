@@ -67,6 +67,6 @@ rise_graphic <- rise_analysis(sample_df, visual = TRUE)
 
 ## License
 
-The rise package is licensed under an MIT license. See the LICENSE file for additional details.
+The rise package is licensed under an MIT license. See the LICENSE and LICENSE.md files for additional details.
 
-![DOI](https://zenodo.org/badge/141607792.svg)](https://zenodo.org/badge/latestdoi/141607792)
+[![DOI](https://zenodo.org/badge/141607792.svg)](https://zenodo.org/badge/latestdoi/141607792)
