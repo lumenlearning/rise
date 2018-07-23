@@ -1,7 +1,9 @@
 Package: rise
-Version: 1.0.2
-Title: Conduct RISE Analysis in R
-Description: Automates the process of identifying learning materials that are not effectively supporting student learning.
+Version: 1.0.3
+Title: Conduct RISE Analysis
+Description: Implements techniques for educational resource inspection, selection, and evaluation (RISE) described in Bodily, Nyland, and Wiley (2017) 
+    <doi:10.19173/irrodl.v18i2.2952>.	Automates the process of identifying learning materials that are not effectively supporting student learning in 
+    technology-mediated courses by synthesizing information about access to course content and performance on assessments.
 Authors@R: c(person("David", "Wiley", email= "david.wiley@gmail.com", role = c("aut", "cre")), person("Lumen Learning", role= "cph"))
 License: MIT + file LICENSE
 Encoding: UTF-8
