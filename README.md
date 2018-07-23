@@ -15,14 +15,14 @@ Before a RISE analysis can be performed, a course must have:
 
 ## Installation
 
-You can always install the latest version of the RISE Analysis package using:
+You can install the latest development version of the RISE package using:
 
 ``` r
 install.packages("devtools")
 devtools::install_github('lumenlearning/rise')
 ```
 
-You will soon be able to install the released version of rise from [CRAN](https://CRAN.R-project.org) with:
+You will *soon* be able to install the latest stable version of rise from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("rise")
