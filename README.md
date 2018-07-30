@@ -1,4 +1,4 @@
-# RISE Analysis in R
+# rise
 
 <img src="https://github.com/lumenlearning/rise/blob/master/rise.png" align="right" />
 
@@ -15,17 +15,17 @@ Before a RISE analysis can be performed, a course must have:
 
 ## Installation
 
-You can install the latest development version of the RISE package using:
+You can install the stable version of rise from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("rise")
+```
+
+You can also install the latest development version of the RISE package using:
 
 ``` r
 install.packages("devtools")
 devtools::install_github('lumenlearning/rise')
-```
-
-You will *soon* be able to install the latest stable version of rise from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("rise")
 ```
 
 ## Example
