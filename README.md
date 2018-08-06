@@ -67,8 +67,8 @@ avg_views <- runif(7, min=0.5, max=1.5)
 
 sample_df <- data.frame(outcomes, avg_scores, avg_views)
 
-rise_df <- rise_analysis(sample_df)
-rise_graphic <- rise_analysis(sample_df, visual = TRUE)
+rise_df <- rise(sample_df)
+rise_graphic <- rise(sample_df, visual = TRUE)
 ```
 
 ## License
