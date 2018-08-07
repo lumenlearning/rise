@@ -6,7 +6,7 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version-ago/rise)](https://cran.r-project.org/package=rise)
 [![CRAN_Download_Badge](http://cranlogs.r-pkg.org/badges/rise)](https://cran.r-project.org/package=rise)
 
-This R package helps you conduct RISE analyses as described in the paper *Bodily, R., Nyland, R., & Wiley, D. (2017). The RISE Framework: Using Learning Analytics to Automatically Identify Open Educational Resources for Continuous Improvement. International Review of Research on Distance and Open Learning, 18(2).* DOI: http://www.irrodl.org/index.php/irrodl/article/view/2952.
+This R package helps you conduct RISE analyses as described in the paper *Bodily, R., Nyland, R., & Wiley, D. (2017). The RISE Framework: Using Learning Analytics to Automatically Identify Open Educational Resources for Continuous Improvement. International Review of Research on Distance and Open Learning, 18(2).* DOI: http://dx.doi.org/10.19173/irrodl.v18i2.2952.
 
 The purpose of a RISE analysis is to help an instructional designer / learning scientist / course developer / instructor quickly identify portions of a course that aren't supporting learning as effectively as they would like. When course materials are licensed as [open educational resources](http://opencontent.org/definition/), materials identified through RISE analysis can be iteratively enhanced through a process of continuous improvement. Special attention should be given to outcomes classified in quadrant four (at the bottom right), where students are spending more time than average using resources but performing below average on associated assessments. For more detail, please refer to the article.
 
