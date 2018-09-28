@@ -18,22 +18,22 @@ rise <- function(df, visual = FALSE) {
   if (ncol(df) < 3) {
     stop("Your data frame must have at least three columns.")
   }
-
+  
   # Only rows without NAs in the columns we care about
   df <- df[complete.cases(df[, 3]), ]
   df <- df[complete.cases(df[, 2]), ]
-
+  
   # Basic descriptives
   x_sd <- sd(unlist(df[, 3]), na.rm = TRUE)
   x_mean <- mean(unlist(df[, 3]), na.rm = TRUE)
   y_sd <- sd(unlist(df[, 2]), na.rm = TRUE)
   y_mean <- mean(unlist(df[, 2]), na.rm = TRUE)
-
-
+  
+  
   # # # # # # # # # # # # # # # # # # # # # # # #
   # Create the graph
   # # # # # # # # # # # # # # # # # # # # # # # #
-
+  
   # Points
   p1x <- x_mean - 3 * x_sd
   p1y <- y_mean
@@ -43,13 +43,13 @@ rise <- function(df, visual = FALSE) {
   p3y <- y_mean
   p4x <- x_mean
   p4y <- y_mean - 3 * y_sd
-
+  
   # Lines for geom_segment
   l1 <- data.frame(x1 = p1x, x2 = p2x, y1 = p1y, y2 = p2y)
   l2 <- data.frame(x1 = p2x, x2 = p3x, y1 = p2y, y2 = p3y)
   l3 <- data.frame(x1 = p3x, x2 = p4x, y1 = p3y, y2 = p4y)
   l4 <- data.frame(x1 = p4x, x2 = p1x, y1 = p4y, y2 = p1y)
-
+  
   # Create the plot
   p <- ggplot2::ggplot(df, aes(unlist(df[, 3]), unlist(df[, 2]))) +
     geom_point() +
@@ -61,18 +61,17 @@ rise <- function(df, visual = FALSE) {
     geom_segment(aes_string(x = 'x1', y = 'y1', xend = 'x2', yend = 'y2'), linetype = "dotted", colour = "dodgerblue3", data = l4) +
     xlab(names(df[, 3])) +
     ylab(names(df[, 2]))
-
-
+  
   # # # # # # # # # # # # # # # # # # # # # # # #
   # Annotate the data frame
   # # # # # # # # # # # # # # # # # # # # # # # #
-
+  
   # Data frames for regression to find slopes
   df1 <- data.frame(x = c(p1x, p2x), y = c(p1y, p2y)) # Top left
   df2 <- data.frame(x = c(p2x, p3x), y = c(p2y, p3y)) # Top right
   df3 <- data.frame(x = c(p4x, p1x), y = c(p4y, p1y)) # Bottom left
   df4 <- data.frame(x = c(p3x, p4x), y = c(p3y, p4y)) # Bottom right
-
+  
   # Slopes and intercepts
   t <- lm(y ~ x, df1) # temporary df
   i1 <- coef(t)[1] # first intercept
@@ -86,7 +85,7 @@ rise <- function(df, visual = FALSE) {
   t <- lm(y ~ x, df4)
   i4 <- coef(t)[1]
   s4 <- coef(t)[2]
-
+  
   # Put points in RISE quadrants
   df$rise_quadrant <- NA
   for (i in 1:nrow(df)) {
@@ -103,7 +102,7 @@ rise <- function(df, visual = FALSE) {
       df[i, ]$rise_quadrant <- 4
     }
   }
-
+  
   # Label points as inside or outside the diamond
   df$rise_outside <- 0
   for (i in 1:nrow(df)) {
@@ -128,7 +127,14 @@ rise <- function(df, visual = FALSE) {
       }
     }
   }
-
+  
+  # How extreme is it - use Pythagorean distance to judge
+  df$distance_from_origin <- 0
+  for (i in 1:nrow(df)) {
+    df$distance_from_origin[i] <- sqrt( (df[i, 2] - mean(df$avg_scores))^2 + (df[i, 3] - mean(df$avg_views)^2) )
+  }
+  
+  # Return values
   if (visual == TRUE) {
     return(p)
   }

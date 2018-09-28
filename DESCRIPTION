@@ -1,5 +1,5 @@
 Package: rise
-Version: 1.0.3
+Version: 1.0.4
 Title: Conduct RISE Analysis
 Description: Implements techniques for educational resource inspection, selection, and evaluation (RISE) described in Bodily, Nyland, and Wiley (2017) 
     <doi:10.19173/irrodl.v18i2.2952>.	Automates the process of identifying learning materials that are not effectively supporting student learning in 
