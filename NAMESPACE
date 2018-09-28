@@ -4,3 +4,4 @@ export(rise)
 importFrom("stats", "coef", "complete.cases", "lm", "sd")
 importFrom("ggplot2", "ggplot", "aes", "aes_string", "geom_hline", 
            "geom_point", "geom_segment", "geom_vline", "xlab", "ylab")
+importFrom("dplyr", "pull")

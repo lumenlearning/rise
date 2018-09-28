@@ -13,6 +13,7 @@ RoxygenNote: 6.0.1
 Depends: 
     R(>= 2.10.0),
     ggplot2,
+    dplyr,
     stats
 Suggests: 
     testthat

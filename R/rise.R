@@ -9,6 +9,7 @@
 #' @export
 #' @examples
 #' library(ggplot2)
+#' library(dplyr)
 #' rise(sample_df, visual = TRUE)
 
 rise <- function(df, visual = FALSE) {
@@ -129,9 +130,10 @@ rise <- function(df, visual = FALSE) {
   }
   
   # How extreme is it - use Pythagorean distance to judge
+  # Use pull to convert tibble columns into vectors
   df$distance_from_origin <- 0
   for (i in 1:nrow(df)) {
-    df$distance_from_origin[i] <- sqrt( (df[i, 2] - mean(df$avg_scores))^2 + (df[i, 3] - mean(df$avg_views)^2) )
+    df$distance_from_origin[i] <- sqrt( (df[i, 2] - mean(pull(df,2)))^2 + (df[i, 3] - mean(pull(df,3)^2)) )
   }
   
   # Return values
