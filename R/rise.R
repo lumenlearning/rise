@@ -129,11 +129,15 @@ rise <- function(df, visual = FALSE) {
     }
   }
   
-  # How extreme is it - use Pythagorean distance to judge
+  # How extreme is it? 
+  # Convert to Z scores and calcaulte Pythagorean distance
   # Use pull to convert tibble columns into vectors
   df$distance_from_origin <- 0
   for (i in 1:nrow(df)) {
-    df$distance_from_origin[i] <- sqrt( (df[i, 2] - mean(pull(df,2)))^2 + (df[i, 3] - mean(pull(df,3)^2)) )
+    df$distance_from_origin[i] <- sqrt( 
+      ((pull(df,2)[i] - mean(pull(df,2))) / sd(pull(df,2)))^2 + 
+      ((pull(df,3)[i] - mean(pull(df,3))) / sd(pull(df,3)))^2
+    )
   }
   
   # Return values
