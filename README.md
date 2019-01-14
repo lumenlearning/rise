@@ -82,4 +82,4 @@ The rise package is licensed under an MIT license. See the LICENSE and LICENSE.m
 
 If you use the RISE package while conducting research that you publish, you can cite the package as:
 
-Wiley, (2018). RISE: An R package for RISE analysis. Journal of Open Source Software, 3(28), 846, https://doi.org/10.21105/joss.00846
+Wiley, D. (2018). RISE: An R package for RISE analysis. Journal of Open Source Software, 3(28), 846, https://doi.org/10.21105/joss.00846
